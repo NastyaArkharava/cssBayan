@@ -3,3 +3,57 @@
 	margin: 0;
 	padding: 0;
 }
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-family: 'Libre Baskerville', serif;
+	font-weight: 400;
+	background-color: lightgray;
+}
+
+.wrapper {
+	margin: 0 auto;
+	height: 100%;
+	width: 80%;
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.header {
+	height: 10vh;
+	background-color: darkgrey;
+}
+
+.main {
+	height: 80vh;
+}
+
+.footer {
+	height: 10vh;
+	background-color: darkgrey;
+}
+
+.footer__wrapper {
+	justify-content: space-between;
+}
+
+.rsschool {
+	width: 6rem;
+	height: 2.24rem;
+	background-image: url(./assets/img/rsschool.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.github {
+	width: 2rem;
+	height: 2rem;
+	background-image: url(./assets/img/github.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
