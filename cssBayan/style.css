@@ -1,0 +1,200 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 0.625rem;
+}
+
+body {
+	font-family: 'Libre Baskerville', serif;
+	font-weight: 400;
+	background-color: lightgray;
+}
+
+.wrapper {
+	margin: 0 auto;
+	height: 100%;
+	width: 80%;
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.header {
+	height: 10vh;
+	background-color: darkgrey;
+}
+
+.main {
+	height: 80vh;
+}
+
+.accordion {
+	width: 100%;
+}
+
+.accordion__item {
+	border-bottom: .1rem solid darkgrey;
+	background-color: rgb(201, 199, 199);
+}
+
+.accordion__item:last-child {
+	border-color: transparent;
+}
+
+.accordion__input {
+	display: none;
+}
+
+.accordion__input:checked ~ .accordion__image {
+	height: 15rem;
+}
+
+.accordion__input:checked ~ .accordion__title {
+	background-color: rgb(179, 179, 179);
+}
+
+.accordion__title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: .7rem;
+	transition: all 0.5s ease-in-out;
+}
+
+.accordion__arrow {
+	height: 1rem;
+	width: 1rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	background-image: url(./assets/svg/button.svg);
+	rotate: -90deg;
+	transition: all 0.5s ease-in-out;
+}
+
+.accordion__input:checked ~ .accordion__title .accordion__arrow {
+	rotate: 0deg;
+}
+
+.accordion__image {
+	display: block;
+	height: 0;
+	transition: all 0.5s ease-in-out;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.accordion__image1 {
+	background-image: url(./assets/img/image1.png);
+}
+
+.accordion__image2 {
+	background-image: url(./assets/img/image2.png);
+}
+
+.accordion__image3 {
+	background-image: url(./assets/img/image3.png);
+}
+
+.accordion__image4 {
+	background-image: url(./assets/img/image4.png);
+}
+
+.footer {
+	height: 10vh;
+	background-color: darkgrey;
+}
+
+.footer__wrapper {
+	justify-content: space-between;
+}
+
+.rsschool {
+	width: 6rem;
+	height: 2.24rem;
+	background-image: url(./assets/img/rsschool.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.github {
+	width: 2rem;
+	height: 2rem;
+	background-image: url(./assets/img/github.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@media (min-width: 480px) and (min-height: 700px) and (orientation: portrait) {
+	html {
+		font-size: 1rem;
+	}
+}
+
+@media (min-width: 500px) and (min-height: 900px) and (orientation: landscape) {
+	html {
+		font-size: 1.3rem;
+	}
+
+	.wrapper {
+		width: 60%;
+	}
+
+	.footer__wrapper {
+		width: 80%;
+	}
+
+	.accordion__arrow {
+		opacity: 0;
+	}
+
+	.accordion:hover .accordion__item .accordion__title .accordion__arrow {
+		opacity: 1;
+	}
+
+	.accordion {
+		color: blue;
+	}
+
+	.accordion:hover {
+		color: black;
+	}
+
+	.accordion__input:checked ~ .accordion__title {
+		color: black;
+	}
+
+	.accordion__input:active ~ .accordion__title {
+		color: blue;
+	}
+
+	.accordion__input:active ~ .accordion__image {
+		filter: opacity(.5);
+	}
+
+	.accordion__input:checked ~ .accordion__image {
+		height: 10rem;
+	}
+
+	.accordion__title:hover + .accordion__image {
+		height: 10rem;
+	}
+
+	.accordion__image:hover {
+		height: 10rem;cursor: pointer;
+	}
+
+	.accordion__item:hover .accordion__title .accordion__arrow {
+		rotate: 0deg;
+	}
+
+	.accordion__title:hover {
+		cursor: pointer;
+	}
+}
